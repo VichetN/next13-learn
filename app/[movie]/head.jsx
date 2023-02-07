@@ -8,7 +8,7 @@ export default async function Head({ params }) {
   const seo = {
     title: data?.title,
     description: data?.overview,
-    linkTo: "",
+    linkTo: `/${data?.id}`,
     images: [data?.backdrop_path],
   };
   return (
@@ -34,7 +34,7 @@ export default async function Head({ params }) {
             ? seo?.description.substring(0, 320)
             : "A short description goes here.",
           images:
-            seo?.images > 0
+            seo?.images?.length > 0
               ? seo?.images?.map((load) => ({
                   url: fetchImage(load),
                 }))
