@@ -41,7 +41,7 @@ export default async function Head() {
                     url: `${getDomain()}/images/android-chrome-192x192.png`,
                   },
                 ],
-          site_name: "Webite Name",
+          site_name: "Movie | TMDB",
           type: "website",
         }}
         twitter={{
