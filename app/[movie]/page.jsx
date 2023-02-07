@@ -10,7 +10,7 @@ export async function generateStaticParams() {
   }));
 }
 
-const fetchMovieDetail = async (id) => {
+export const fetchMovieDetail = async (id) => {
   return await fetch(fetchURL(`/movie/${id}?api_key=${process.env.API_KEY}`), {
     // next: {
     //   revalidate: 30,

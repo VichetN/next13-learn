@@ -4,7 +4,7 @@ import Movie from "./components/Movie";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const fetchMovies = async () => {
+export const fetchMovies = async () => {
   const movies = await fetch(
     fetchURL(`/movie/popular?api_key=${process.env.API_KEY}`)
   ).then((res) => res.json());
