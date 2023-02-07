@@ -5,7 +5,7 @@ export async function generateStaticParams() {
   const movies = await fetch(
     fetchURL(`/movie/popular?api_key=${process.env.API_KEY}`)
   ).then((res) => res.json());
-  return movies?.result?.map((e) => ({
+  return movies?.results?.map((e) => ({
     movie: String(e?.id),
   }));
 }
